@@ -9,7 +9,7 @@ scaler = pickle.load(open("/config/workspace/Models/scaler.pkl", 'rb'))
 model = pickle.load(open("/config/workspace/Models/modelForPrediction.pkl", 'rb'))
 
 @app.route("/")
-def hello_world():
+def index():
     return render_template('index.html') 
 
 @app.route("/predict", methods = ['GET', 'POST'])
