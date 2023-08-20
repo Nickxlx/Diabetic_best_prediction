@@ -2,7 +2,8 @@ from flask import Flask, request, render_template, app
 from flask import Response
 import pickle
 
-app = Flask(__name__)
+application = Flask(__name__)
+app = application
 
 scaler = pickle.load(open("/config/workspace/Models/scaler.pkl", 'rb'))
 model = pickle.load(open("/config/workspace/Models/modelForPrediction.pkl", 'rb'))
